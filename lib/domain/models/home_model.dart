@@ -2,13 +2,15 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
+import 'package:intl/intl.dart';
 
 import 'package:minhacarteira/domain/models/depesa_model.dart';
+
+final NumberFormat usCurrency = NumberFormat('#.##0', 'pt_BR');
 
 class HomeModel {
   double receitaTotal;
   double despesasTotal;
-  String? receitaDisplay;
 
   List<DespesaModel> despesas;
 

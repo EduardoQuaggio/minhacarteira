@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:minhacarteira/Presenter/Home/home_state.dart';
+import 'package:intl/intl.dart';
+import 'package:minhacarteira/Presenter/Home/states/home_state.dart';
 import 'package:minhacarteira/Presenter/Home/home_store.dart';
 
 const List<String> list = <String>["Janeiro", "Fevereiro"];
@@ -94,7 +95,10 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ),
                                   Text(
-                                    "R\$ " + data.receitaTotal.toString(),
+                                    NumberFormat.simpleCurrency(
+                                      locale: 'pt_BR',
+                                      decimalDigits: 2,
+                                    ).format(data.receitaTotal),
                                     textAlign: TextAlign.right,
                                   ),
                                 ],
@@ -132,7 +136,10 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                                 Text(
-                                  data.despesasTotal.toString(),
+                                  NumberFormat.simpleCurrency(
+                                    locale: 'pt_BR',
+                                    decimalDigits: 2,
+                                  ).format(data.despesasTotal),
                                   textAlign: TextAlign.right,
                                 ),
                               ],
@@ -188,7 +195,10 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             Text(
-                              "R\$ " + model.Valor.toString(),
+                              NumberFormat.simpleCurrency(
+                                locale: 'pt_BR',
+                                decimalDigits: 2,
+                              ).format(model.Valor),
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,

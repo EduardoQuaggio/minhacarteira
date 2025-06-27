@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:minhacarteira/Presenter/Home/home_state.dart';
+import 'package:minhacarteira/Presenter/Home/states/home_state.dart';
 import 'package:minhacarteira/domain/models/depesa_model.dart';
 import 'package:minhacarteira/domain/models/home_model.dart';
 
